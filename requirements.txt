@@ -3,6 +3,7 @@ cartopy
 python>=3.6
 
 notebook
+rise
 
 matplotlib
 numpy
