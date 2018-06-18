@@ -79,3 +79,11 @@ Or for users of older versions of conda ``source activate scipy-cartopy-tutorial
 This is mostly because there are a number of non-trivial (non-python) packages
 that need to be installed. These are the kinds of packages that a tool like conda
 was designed for.
+
+## conda environment file
+
+The conda environment under which the tutorial was originally written is available
+in ``env-exports/${platform}.txt``. This may be useful in ascertaining specific
+dependency versions were used when developing.
+
+These were produced with ``conda list --explicit > env-exports/${platform}.txt``.
