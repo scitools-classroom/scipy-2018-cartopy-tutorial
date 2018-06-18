@@ -48,6 +48,10 @@ The tutorial will be applicable to a broad range of experiences, but familiarity
 Please see the [dependency requirements](requirements.txt) for a list of packages needed
 to participate in this tutorial.
 
+Of significant note is that this tutorial is only designed for Python 3.6 or greater.
+Whilst most of the tools are available for earlier versions of Python, the tutorial
+itself isn't (and will never be).
+
 ## Conda
 
 Conda is the recommended tool for installing the dependencies of this tutorial.
