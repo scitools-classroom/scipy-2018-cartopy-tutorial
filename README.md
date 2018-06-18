@@ -6,28 +6,26 @@
   Around the world in 80 ways: An introduction to working with geodata and cartopy
 </h1>
 
-<h4 align="center">
-  Presented at <a href="https://scipy2018.scipy.org">SciPy 2018</a>
-</h4>
+## Note
 
+This repository is still under development. Please check back closer to the time for the complete
+tutorial material.
+In the meantime, please feel free to install the dependencies documented in
+[``requirement.txt``](requirements.txt) to speed up installation on the day.
 
 <!-- TOC -->
 
 + [SciPy 2018](#scipy-2018)
- + [Abstract](#abstract)
 + [Installation / set-up](#installation)
 
 <!-- /TOC -->
 
+
 # [SciPy 2018](https://scipy2018.scipy.org/ehome/index.php?eventid=299527&tabid=711308&cid=2229599&sessionid=21549174&sessionchoice=1&)
 
-# Date
+Date: 8am on Monday 9th July, 2018
 
-8am on Monday 9th July, 2018
-
-# Download
-
-scipy-2018 git tag (available from around 6th July), see also
+Download: scipy-2018 git tag (available from around 6th July), see also
 [releases](https://github.com/SciTools/cartopy-tutorial/releases/)
 
 ## Abstract
