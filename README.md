@@ -85,3 +85,10 @@ in ``env-exports/${platform}.txt``. This may be useful in ascertaining specific
 dependency versions were used when developing.
 
 These were produced with ``conda list --explicit > env-exports/${platform}.txt``.
+
+
+# Running the tutorial
+
+Once you have installed the necessary dependencies, run ``jupyter notebook``
+from the root of this repository, and start with ``introduction.ipynb``.
+
