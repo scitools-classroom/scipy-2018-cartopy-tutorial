@@ -4,12 +4,16 @@
 #rise-header {
     margin: 0px;
     padding: 15px 80px;
-    font-size: 3rem;
     width: 100%;
     background-color: #232323;
-    color: white;
     z-index: 10000;
-    font-family: 'Noto Sans', sans-serif;
+}
+
+#rise-header, #rise-header a, #rise-header a:hover {
+  color: white;
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 2rem;
+  text-decoration-line: none;
 }
 
 #rise-header img {
