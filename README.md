@@ -70,7 +70,6 @@ conda activate scipy-cartopy-tutorial
 
 Or for users of older versions of conda ``source activate scipy-cartopy-tutorial``.
 
-
 ## Pip
 
 ``pip`` is not recommended for installing this tutorial's dependencies.
@@ -78,7 +77,7 @@ This is mostly because there are a number of non-trivial (non-python) packages
 that need to be installed. These are the kinds of packages that a tool like conda
 was designed for.
 
-## conda environment file
+## Conda environment file
 
 The conda environment under which the tutorial was originally written is available
 in ``env-exports/${platform}.txt``. This may be useful in ascertaining specific
@@ -86,9 +85,29 @@ dependency versions were used when developing.
 
 These were produced with ``conda list --explicit > env-exports/${platform}.txt``.
 
+To create a conda environment based on one of the appropriate conda environment files:
+
+```
+conda create --name scipy-cartopy-tutorial --file env-exports/${platform}.txt
+```
+
+
+# Checking the tutorial installation
+
+First, if you have not already done so, activate the tutorial conda environment:
+
+```
+conda activate scipy-cartopy-tutorial
+```
+
+Or for users of older versions of conda ```source activate scipy-cartopy-tutorial```.
+
+Now, run the [`check_env.py`](check_env.py) script in the root of this repository.
+If all the required packages say `[ OK ]`, then you're ready to start your jouney around the world!
+
 
 # Running the tutorial
 
-Once you have installed the necessary dependencies, run ``jupyter notebook``
+Once you have installed and checked the necessary dependencies, run ``jupyter notebook``
 from the root of this repository, and start with ``introduction.ipynb``.
 
