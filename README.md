@@ -103,7 +103,7 @@ conda activate scipy-cartopy-tutorial
 Or for users of older versions of conda ```source activate scipy-cartopy-tutorial```.
 
 Now, run the [`check_env.py`](check_env.py) script in the root of this repository.
-If all the required packages say `[ OK ]`, then you're ready to start your jouney around the world!
+If all the required packages say `[ OK ]`, then you're ready to start your journey around the world!
 
 
 # Running the tutorial
