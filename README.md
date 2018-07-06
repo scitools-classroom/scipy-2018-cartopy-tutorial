@@ -6,6 +6,8 @@
   Around the world in 80 ways: An introduction to working with geodata and cartopy
 </h1>
 
+[![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/SciTools/cartopy-tutorial/master?filepath=introduction.ipynb)
+
 ## Note
 
 This repository is still under development. Please check back closer to the time for the complete
