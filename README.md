@@ -8,13 +8,6 @@
 
 [![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/SciTools/cartopy-tutorial/master?filepath=introduction.ipynb)
 
-## Note
-
-This repository is still under development. Please check back closer to the time for the complete
-tutorial material.
-In the meantime, please feel free to install the dependencies documented in
-[``requirement.txt``](requirements.txt) to speed up installation on the day.
-
 <!-- TOC -->
 
 + [SciPy 2018](#scipy-2018)
