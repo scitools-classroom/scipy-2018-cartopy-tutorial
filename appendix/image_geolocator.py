@@ -11,7 +11,10 @@ from matplotlib.widgets import RectangleSelector
 import matplotlib.pyplot as plt
 import matplotlib.transforms as mtrans
 import numpy as np
+import os.path
 
+
+here = os.path.dirname(__file__)
 
 rob = ccrs.Robinson(central_longitude=11.25)
 ax = plt.axes(projection=rob)
@@ -25,7 +28,8 @@ extent = list(rob.x_limits) + list(rob.y_limits)
 #           -6356356.797292399, 8605867.777293697]
 
 img_array = plt.imread(
-    '../resources/640px-Around_the_World_in_Eighty_Days_map.png')
+    os.path.join(
+        here, '..', 'resources', '640px-Around_the_World_in_Eighty_Days_map.png'))
 img = ax.imshow(img_array, extent=extent, transform=rob, origin='upper')
 
 # Create a separate axes for the Rectangle selector (as it needs
