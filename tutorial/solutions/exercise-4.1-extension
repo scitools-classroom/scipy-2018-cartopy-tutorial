@@ -1,0 +1,27 @@
+
+# Given that the Plate Carree line follows the cartesian route, we need to
+# modify the input coordinates to reflect the fact that the route shouldn't
+# be nearly 200 degrees of longitude long. A quick fix is to add 360 to the
+# second x coordinate value.
+
+pc_shortest_line = sgeom.LineString(
+    [(139.6380, 35.4437), (-122.4194 + 360, 37.7749)])
+pc = ccrs.PlateCarree()
+
+pc_shortest_lines = pc.project_geometry(
+    pc_shortest_line, ccrs.PlateCarree())
+
+plt.figure()
+ax = plt.axes(projection=pc)
+
+# Add the Geodetic line in red
+ax.add_geometries(
+    [geod_lines], pc,
+    edgecolors='red', facecolor='none', lw=2)
+
+ax.add_geometries(
+    [pc_shortest_lines], pc,
+    edgecolors='green', facecolor='none', lw=2)
+
+ax.coastlines()
+plt.show()

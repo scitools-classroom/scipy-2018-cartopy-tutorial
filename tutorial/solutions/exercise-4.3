@@ -1,0 +1,6 @@
+
+distance = linestring_distance(foggs_plan)
+land_distance = linestring_distance(foggs_land_plan)
+print("Fogg's planned route is approximately {:.0f} km. "
+      "{:.0f} km of that is over land"
+      .format(distance / 1000, land_distance / 1000))

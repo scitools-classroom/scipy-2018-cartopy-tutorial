@@ -1,0 +1,18 @@
+
+plt.figure()
+ax = plt.axes(projection=ccrs.PlateCarree())
+
+ax.coastlines()
+destinations = [
+    'London', 'Suez', 'Bombay', 'Calcutta', 'Hong Kong',
+    'Yokohama', 'San Fransisco', 'New York City', 'London']
+
+lons, lats = zip(*[
+    (places[place]['lon'], places[place]['lat'])
+     for place in destinations])
+
+ax.stock_img()
+ax.set_title("Phileas Fogg's proposed route")
+ax.plot(lons, lats,
+        linestyle='--', color='orange', linewidth=4,
+        transform=ccrs.Geodetic())

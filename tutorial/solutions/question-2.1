@@ -1,0 +1,13 @@
+
+ny_stereo = ccrs.Stereographic(
+    central_longitude=new_york['lon'],
+    central_latitude=new_york['lat'])
+
+plt.figure()
+ax = plt.axes(projection=ny_stereo)
+ax.set_extent([-170, -50, 10, 80])
+
+ax.gridlines(color='black', alpha=0.2, linestyle='--')
+ax.stock_img()
+ax.add_feature(cartopy.feature.STATES, edgecolor='gray')
+new_york_to_honolulu(ax)

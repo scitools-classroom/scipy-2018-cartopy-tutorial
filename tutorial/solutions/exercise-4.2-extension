@@ -1,0 +1,6 @@
+
+print('Planned locations after N days:')
+cumulative_distances = np.cumsum(distances)
+for dest, distance in zip(destinations[1:], cumulative_distances):
+    m_per_day = 17.2 * 1000 * 24
+    print(' {:13s}: \t{:2.0f} days'.format(dest, distance/m_per_day))

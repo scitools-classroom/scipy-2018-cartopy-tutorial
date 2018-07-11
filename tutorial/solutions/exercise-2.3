@@ -1,0 +1,8 @@
+
+plt.figure()
+ax = plt.axes(projection=ccrs.Robinson(central_longitude=11.25))
+
+ax.stock_img()
+ax.gridlines(color='gray', linestyle='--')
+ax.set_title("Robinson centered on the meridian\n"
+             "11°15' to east from Greenwich Prime Meridian")

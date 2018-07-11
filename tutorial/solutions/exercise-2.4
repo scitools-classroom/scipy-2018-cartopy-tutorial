@@ -1,0 +1,14 @@
+
+extent = extent = [-13636707, 17044670,
+                   -6308712, 8565930]
+
+plt.figure()
+
+rob = ccrs.Robinson(central_longitude=11.25)
+ax = plt.axes(projection=rob)
+
+ax.gridlines(color='gray', linestyle='--')
+ax.coastlines()
+img = plt.imread('../resources/640px-Around_the_World_in_Eighty_Days_map.png')
+ax.imshow(img, extent=extent, transform=rob, origin='upper')
+ax.set_global()

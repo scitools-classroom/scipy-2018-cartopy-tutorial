@@ -1,0 +1,6 @@
+
+import json
+import shapely.geometry as sgeom
+
+with open('route.geojson', 'w') as fh:
+    json.dump(sgeom.mapping(route), fh)

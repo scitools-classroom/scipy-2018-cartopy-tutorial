@@ -1,0 +1,15 @@
+
+plt.figure()
+
+ax = plt.axes(projection=ccrs.PlateCarree())
+ax.gridlines(color='gray', linestyle='--')
+ax.coastlines()
+
+img = plt.imread(fname)
+ax.imshow(img, extent=extent, transform=rob, origin='upper')
+ax.set_global()
+
+iplt.pcolormesh(october_cube)
+
+plt.tight_layout()
+plt.show()

@@ -1,0 +1,31 @@
+
+%matplotlib notebook
+import cartopy.crs as ccrs
+import cartopy.io.shapereader as shpreader
+import matplotlib.pyplot as plt
+import numpy as np
+
+
+def create_axes():
+    plt.figure(figsize=(9, 6))
+    ax = plt.axes(
+        projection=ccrs.Robinson(central_longitude=11.25))
+    ax.set_global()
+    ax.outline_patch.set_edgecolor('white')
+    return ax
+
+
+def add_1880_countries(ax):
+    # 1880 countries
+    fname = '../resources/1880_countries/cntry1880.shp'
+    reader = shpreader.Reader(fname)
+    light_gray = np.array([183, 183, 183]) / 255
+    ax.add_geometries(
+        list(reader.geometries()), ccrs.PlateCarree(),
+        edgecolor='white', facecolor=light_gray, linewidth=0.2)
+
+
+ax = create_axes()
+add_1880_countries(ax)
+plt.tight_layout()
+plt.show()
