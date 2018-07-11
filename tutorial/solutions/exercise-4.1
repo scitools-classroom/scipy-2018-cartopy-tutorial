@@ -1,0 +1,27 @@
+
+
+# The major difference between these two projected lines is that the Geodetic
+# line takes the shortest route from A to B, whereas the Plate Carree line
+# takes the cartesian route from A to B.
+
+line = sgeom.LineString([(139.6380, 35.4437), (-122.4194, 37.7749)])
+pc = ccrs.PlateCarree()
+
+pc_lines = pc.project_geometry(line, ccrs.PlateCarree())
+geod_lines = pc.project_geometry(line, ccrs.Geodetic())
+
+plt.figure()
+ax = plt.axes(projection=pc)
+
+# Add the Plate Carree line in blue
+ax.add_geometries(
+    [pc_lines], pc,
+    edgecolors='blue', facecolor='none', lw=2)
+
+# Add the Geodetic line in red
+ax.add_geometries(
+    [geod_lines], pc,
+    edgecolors='red', facecolor='none', lw=2)
+
+ax.coastlines()
+plt.show()

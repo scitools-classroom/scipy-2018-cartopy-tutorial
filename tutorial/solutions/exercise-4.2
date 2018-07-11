@@ -1,0 +1,15 @@
+
+destinations = [
+    'London', 'Suez', 'Bombay', 'Calcutta', 'Hong Kong',
+    'Yokohama', 'San Fransisco', 'New York City', 'London']
+
+waypoints = [(places[place]['lon'], places[place]['lat'])
+             for place in destinations]
+
+distances, azi_0, azi_1 = np.array(
+    geod.inverse(waypoints[:-1], waypoints[1:]).T)
+
+print("Approximate distance of Fogg's proposed route: {:.0f} km"
+      .format(distances.sum() / 1000))
+print("Average speed required over 80 days: {:.1f} km/h"
+      .format(distances.sum() / 1000 / (80 * 24)))

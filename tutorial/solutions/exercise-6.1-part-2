@@ -1,0 +1,33 @@
+
+import matplotlib.font_manager as fm
+
+
+def add_fancy_labels(ax):
+    fpath = "../resources/freebooter-font/FREEBSC_.ttf"
+    prop = fm.FontProperties(fname=fpath)
+
+    # Define some pretty text alignments for the labels.
+    # Nothing automatic here, it is all done by hand:
+    labels = {'London': {'ha': 'center', 'va': 'bottom'},
+              'Suez': {'ha': 'center', 'va': 'bottom'},
+              'Bombay': {'ha': 'right', 'va': 'bottom'},
+              'Calcutta': {'ha': 'center', 'va': 'bottom'},
+              'Hong Kong': {'ha': 'left', 'va': 'top'},
+              'Yokohama': {'ha': 'center', 'va': 'bottom'},
+              'San Francisco': {'ha': 'center', 'va': 'bottom'},
+              'New York': {'ha': 'center', 'va': 'top'},
+             }
+
+    for place, kwargs in labels.items():
+        lon, lat = places[place]
+        ax.plot(lon, lat, 'ok', transform=ccrs.PlateCarree())
+        ax.text(lon, lat, ' {} '.format(place), transform=ccrs.PlateCarree(),
+                fontproperties=prop, fontsize=16, weight='black',
+                **kwargs)
+
+
+ax = create_axes()
+add_1880_countries(ax)
+add_fancy_labels(ax)
+plt.tight_layout()
+plt.show()

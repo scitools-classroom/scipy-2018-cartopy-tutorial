@@ -1,0 +1,22 @@
+
+import shapely.geometry as sgeom
+
+
+def draw_route(ax):
+    destinations = [
+        'London', 'Suez', 'Bombay', 'Calcutta', 'Hong Kong',
+        'Yokohama', 'San Francisco', 'New York', 'London']
+
+    coords = np.stack([places[place] for place in destinations])
+    route = sgeom.LineString(coords)
+    ax.add_geometries(
+        [route], ccrs.Geodetic(),
+        edgecolor='blue', facecolor='none', linewidth=2)
+
+
+ax = create_axes()
+add_1880_countries(ax)
+add_fancy_labels(ax)
+draw_route(ax)
+plt.tight_layout()
+plt.show()

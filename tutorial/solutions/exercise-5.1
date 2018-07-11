@@ -1,0 +1,10 @@
+
+plt.figure()
+
+ax = plt.axes(projection=rob)
+ax.coastlines()
+ax.add_geometries(
+    [route], ccrs.PlateCarree(),
+    edgecolor='blue', facecolor='none', linewidth=2)
+ax.set_global()
+plt.show()

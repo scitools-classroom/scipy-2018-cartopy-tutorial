@@ -1,0 +1,21 @@
+
+import json
+from shapely.geometry import mapping, shape
+
+
+def draw_route_geojson(ax):
+    route_geojson = 'geospatial/route.geojson'
+
+    # Extension: The route.geojson created in raster to vector.
+    with open(route_geojson, 'r') as fh:
+        route = shape(json.load(fh))
+    ax.add_geometries([route], ccrs.PlateCarree(),
+                      edgecolor='blue', facecolor='none', linewidth=2)
+
+
+ax = create_axes()
+add_1880_countries(ax)
+add_fancy_labels(ax)
+draw_route_geojson(ax)
+plt.tight_layout()
+plt.show()
